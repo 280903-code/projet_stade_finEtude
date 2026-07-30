@@ -1,0 +1,427 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #e5e7eb;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #111827;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+/* Services Section */
+.services-section {
+    background: #f9fafb;
+}
+
+.service-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #22c55e, #3b82f6, #eab308);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon-wrapper {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.service-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper::after {
+    opacity: 0.2;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-icon-green {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    color: #15803d;
+}
+
+.service-icon-blue {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1d4ed8;
+}
+
+.service-icon-yellow {
+    background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+    color: #ca8a04;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.service-card p {
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.service-feature {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-feature {
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+/* Pricing Section */
+.pricing-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.pricing-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid #22c55e;
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.pricing-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover .pricing-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #15803d;
+    margin: 1rem 0;
+}
+
+.pricing-period {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Reviews Section */
+.review-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.review-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.review-stars {
+    color: #facc15;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.review-text {
+    color: #374151;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-avatar {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #1a5f1a, #0d3d0d);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.review-info h4 {
+    font-weight: 600;
+    color: #111827;
+}
+
+.review-info p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #1a5f1a 0%, #0d3d0d 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.cta-subtitle {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+.cta-button {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 0.4s forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .service-card,
+    .pricing-card,
+    .review-card {
+        padding: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-title {
+        font-size: 1.75rem;
+    }
+}

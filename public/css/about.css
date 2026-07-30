@@ -1,0 +1,344 @@
+/* About Page - Unique Modern Design */
+.about-hero {
+    background: #0a0a0a;
+    color: white;
+    padding: 10rem 0 8rem;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.hero-content h1 span {
+    color: #1a5f1a;
+    display: block;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #888;
+    max-width: 500px;
+    line-height: 1.6;
+    border-left: 3px solid #1a5f1a;
+    padding-left: 1.5rem;
+}
+
+/* Story Section */
+.story-section {
+    padding: 8rem 0;
+    background: white;
+    position: relative;
+}
+
+
+.story-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6rem;
+    align-items: start;
+    padding-left: 3rem;
+}
+
+.story-content h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #0a0a0a;
+    line-height: 1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+}
+
+.story-content h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #1a5f1a;
+    margin-top: 1rem;
+}
+
+.story-content p {
+    color: #333;
+    line-height: 2;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-image {
+    position: sticky;
+    top: 4rem;
+}
+
+.story-image img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.story-image:hover img {
+    filter: grayscale(0%);
+}
+
+.year-tag {
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    background: #1a5f1a;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 99;
+    border-radius: 37px;
+}
+
+/* Values Section */
+.values-section {
+    padding: 8rem 0;
+    background: #e3e3e3;
+}
+
+.values-header {
+    margin-bottom: 5rem;
+}
+
+.values-header h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #0a0a0a;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-item {
+    padding: 3rem;
+    border: 1px solid #0a0a0a;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.value-item::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(26, 95, 26, 0.1);
+    line-height: 1;
+}
+
+.value-item:hover {
+    background: #0a0a0a;
+    color: white;
+}
+
+.value-item:hover .value-icon {
+    background: white;
+    color: #0a0a0a;
+}
+
+.value-item:hover h3,
+.value-item:hover p {
+    color: white;
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: #0a0a0a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.4s ease;
+}
+
+.value-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.value-item p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Features Section */
+.features-section {
+    padding: 4rem 0;
+    background: #f5f5f5;
+}
+
+.features-header h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #0a0a0a;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 4rem;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.feature-row:last-child {
+    border-bottom: none;
+}
+
+.feature-number {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #1a5f1a;
+    line-height: 1;
+}
+
+.feature-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin-bottom: 0.5rem;
+}
+
+.feature-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #1a5f1a;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: 'PLAY';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 10;
+}
+
+.cta-section h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: #1a5f1a;
+    padding: 1.5rem 4rem;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    border: 3px solid white;
+}
+
+.cta-btn:hover {
+    background: transparent;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        clip-path: none;
+        padding: 6rem 0 4rem;
+    }
+    
+    .story-section::before {
+        display: none;
+    }
+    
+    .story-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-left: 0;
+    }
+    
+    .story-image {
+        position: relative;
+        top: 0;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-row {
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+    }
+    
+    .feature-number {
+        font-size: 3rem;
+    }
+}
