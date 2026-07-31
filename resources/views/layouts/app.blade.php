@@ -155,7 +155,7 @@
                         <span>FootArena</span>
                     </div>
                     <p class="footer-text">
-                        Le meilleur terrain de mini-foot de la région. Réservez votre créneau en ligne et profitez d'une expérience de jeu exceptionnelle.
+                        Le meilleur terrain de la région. Réservez votre créneau en ligne et profitez d'une expérience de jeu exceptionnelle.
                     </p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-facebook"></i></a>

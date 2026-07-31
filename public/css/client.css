@@ -45,7 +45,7 @@
 }
 
 .stat-card {
-    background: white;
+    background: rgba(231, 231, 231, 0.638);
     padding: 1.5rem;
     border: 1px solid #0a0a0a;
     transition: all 0.3s ease;
@@ -57,7 +57,7 @@
 }
 
 .stat-card-primary {
-    border-color: #1a5f1a;
+    border-color: #000000;
 }
 
 .stat-card-secondary {
@@ -65,7 +65,7 @@
 }
 
 .stat-card-accent {
-    border-color: #fbbf24;
+    border-color: #000000;
 }
 
 .stat-number {
@@ -77,11 +77,11 @@
 }
 
 .stat-card-primary .stat-number {
-    color: #1a5f1a;
+    color: #000000;
 }
 
 .stat-card-accent .stat-number {
-    color: #fbbf24;
+    color: #145d01;
 }
 
 .stat-label {

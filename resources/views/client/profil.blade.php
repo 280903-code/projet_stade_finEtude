@@ -16,8 +16,8 @@
     @endif
 
     <div class="bg-white rounded-lg shadow-lg p-8">
-        <div class="flex items-center mb-8">
-            <div class="bg-green-700 text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">
+        <div class="flex items-center mb-9">
+            <div class="bg-green-700 text-white h-6 rounded-full flex items-center justify-center text-3xl font-bold">
                 {{ substr(Auth::user()->name, 0, 1) }}
             </div>
             <div class="ml-6">
