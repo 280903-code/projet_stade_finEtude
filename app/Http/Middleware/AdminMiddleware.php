@@ -15,7 +15,7 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Vérifier si l'utilisateur est connecté et est un administrateur
+        // on verifie si l'utilisateur est connecté et est un administrateur
         if (!auth()->check() || !auth()->user()->isAdmin()) {
             return redirect('/')->with('error', 'Accès refusé. Vous devez être administrateur.');
         }

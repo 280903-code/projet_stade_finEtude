@@ -236,7 +236,7 @@ class AdminController extends Controller
         
         // Créer un terrain s'il n'existe pas
         $validated['nom'] = 'Terrain Principal';
-        $validated['description'] = 'Terrain de mini-foot';
+        $validated['description'] = 'Terrain de footArena';
         $validated['adresse'] = 'Medina, Dakar, Sénégal';
         $validated['telephone'] = '+221 77 123 45 67';
         $validated['email'] = 'contact@footarena.sn';

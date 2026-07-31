@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder
     {
         // Créer un administrateur par défaut
         User::firstOrCreate(
-            ['email' => 'admin@minifoot.sn'],
+            ['email' => 'admin@footarena.sn'],
             [
                 'name' => 'Administrateur',
-                'password' => Hash::make('admin123'),
+                'password' => Hash::make('benabdou28'),
                 'role' => 'admin',
-                'telephone' => '+221 77 000 00 00',
+                'telephone' => '+221 77 440 95 66',
                 'adresse' => 'Dakar, Sénégal',
             ]
         );

@@ -60,9 +60,9 @@ class ReservationController extends Controller
                                              ->whereIn('statut', ['en_attente', 'confirmee'])
                                              ->get(['heure_debut', 'heure_fin', 'user_id']);
         
-        // Générer des créneaux de 1h de 8h à 22h
+        // Générer des créneaux de 1h de 8h à 23h
         $creneaux = [];
-        for ($heure = 8; $heure < 22; $heure++) {
+        for ($heure = 8; $heure < 23; $heure++) {
             $heureDebut = sprintf('%02d:00:00', $heure);
             $heureFin = sprintf('%02d:00:00', $heure + 1);
             
@@ -126,7 +126,7 @@ class ReservationController extends Controller
             'date_reservation.required' => 'La date de réservation est obligatoire.',
             'date_reservation.after_or_equal' => 'La date de réservation ne peut pas être dans le passé.',
             'heure_debut.required' => 'L\'heure de début est obligatoire.',
-            'heure_fin.required' => 'L\'heure de fin est obligatoire.',
+            'heure_fin.required' => "L'heure de fin est obligatoire.",
             'heure_fin.after' => 'L\'heure de fin doit être après l\'heure de début.',
             'prix.required' => 'Le prix est obligatoire.',
             'prix.numeric' => 'Le prix doit être un nombre.',
@@ -169,15 +169,15 @@ class ReservationController extends Controller
     {
         $heure = Carbon::createFromFormat('H:i:s', $heure);
         
-        // Matin: 8h-12h
+        
         if ($heure->hour >= 8 && $heure->hour < 12) {
             return $prixMatin;
         }
-        // Après-midi: 12h-18h
+        
         elseif ($heure->hour >= 12 && $heure->hour < 18) {
             return $prixApresMidi;
         }
-        // Soir: 18h-22h
+      
         else {
             return $prixSoir;
         }
