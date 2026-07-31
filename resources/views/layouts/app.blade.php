@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'FootArena - Terrain de Foot')</title>
     
-    <!-- Font Awesome -->
+    <!-- liens icons et style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/base.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     
-    <!-- Page Specific CSS -->
+    <!-- Page  CSS -->
     @if(Request::is('/'))
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     @endif
@@ -41,7 +41,7 @@
     @yield('styles')
 </head>
 <body class="{{ Request::is('/') ? 'home-page' : '' }}">
-    <!-- Navigation -->
+    <!-- Navig -->
     <nav class="nav" style="{{ Request::is('/') ? 'background: transparent; box-shadow: none; border-bottom: none;' : '' }}">
         <div class="nav-content">
             <div class="nav-logo">
@@ -51,7 +51,7 @@
                 </a>
             </div>
             
-            <!-- Desktop Menu -->
+            <!-- Odri Menu -->
             <div class="nav-menu">
                 <a href="{{ route('home') }}" class="nav-link">Accueil</a>
                 <a href="{{ route('reservation.index') }}" class="nav-link">Réservation</a>
@@ -179,14 +179,14 @@
                     <ul class="footer-contact">
                         <li><i class="fas fa-map-marker-alt mr-2"></i> Medina, Dakar, Sénégal</li>
                         <li><i class="fas fa-phone mr-2"></i> +221 77 123 45 67</li>
-                        <li><i class="fas fa-envelope mr-2"></i> contact@minifoot.sn</li>
-                        <li><i class="fas fa-clock mr-2"></i> 08h - 22h</li>
+                        <li><i class="fas fa-envelope mr-2"></i> contact@footarena.sn</li>
+                        <li><i class="fas fa-clock mr-2"></i> 08h - 00h</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 FootArena. Tous droits réservés. Développé avec ❤️ au Sénégal</p>
+                <p>&copy; 2026 FootArena. Tous droits réservés. Développé au Sénégal</p>
             </div>
         </div>
     </footer>

@@ -68,7 +68,7 @@
                         <i class="fas fa-moon"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Soir</h3>
-                    <p class="text-gray-600 mb-4">18h00 - 22h00</p>
+                    <p class="text-gray-600 mb-4">18h00 - 23h59</p>
                     
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold mb-2">Prix (FCFA)</label>
@@ -87,7 +87,7 @@
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <p class="text-sm text-blue-800">
                     <i class="fas fa-info-circle mr-2"></i>
-                    Ces prix seront appliqués automatiquement selon l'heure de la réservation. Les prix sont en FCFA (Franc CFA).
+                    Ces prix seront appliqués automatiquement selon l'heure de la réservation. Les prix sont en FCFA.
                 </p>
             </div>
 

@@ -95,7 +95,7 @@
                                 <span class="font-bold text-green">{{ number_format($terrain->prix_apres_midi, 0, ',', ' ') }} FCFA</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-gray">Soir (18h-22h)</span>
+                                <span class="text-gray">Soir (18h-23h)</span>
                                 <span class="font-bold text-green">{{ number_format($terrain->prix_soir, 0, ',', ' ') }} FCFA</span>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
             heureSelect.innerHTML = '<option value="">Sélectionnez une heure</option>';
             
             // Générer les options d'heure (8h à 21h)
-            for (let heure = 8; heure < 22; heure++) {
+            for (let heure = 8; heure < 23; heure++) {
                 const option = document.createElement('option');
                 option.value = heure;
                 option.textContent = `${heure.toString().padStart(2, '0')}:00 - ${(heure + 1).toString().padStart(2, '0')}:00`;

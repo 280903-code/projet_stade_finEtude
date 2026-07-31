@@ -7,7 +7,7 @@
 <section class="hero">
     <!-- Background Image -->
     <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1920&h=1080&fit=crop"
+        <img src="{{ asset('img/photo_accueil.jpeg') }}"
              alt="Terrain de football">
     </div>
     
@@ -20,7 +20,7 @@
             Bienvenue au <span class="text-yellow">FootArena</span>
         </h1>
         <p class="hero-subtitle">
-            Le meilleur terrain de mini-foot de Dakar. Réservez votre créneau en ligne et vivez une expérience de jeu exceptionnelle.
+            Le meilleur terrain des mini stades de Dakar. Réservez votre créneau en ligne et vivez une expérience de jeu exceptionnelle.
         </p>
         <div class="hero-buttons">
             <a href="{{ route('reservation.index') }}" class="btn-yellow shadow-lg">
@@ -34,42 +34,36 @@
 </section>
 
 <!-- Services Section -->
-<section id="services" class="section">
+<section id="services" class="services-section">
     <div class="container">
-        <div class="text-center mb-8">
-            <h2 class="section-title">Nos Services</h2>
-            <p class="section-subtitle">Ce que nous vous proposons</p>
-        </div>
+        <h2 class="services-title">NOS SERVICES</h2>
         
-        <div class="grid grid-3">
-            <div class="card">
-                <div class="text-center mb-4">
-                    <i class="fas fa-clock text-5xl text-green"></i>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <div class="service-icon">
+                    <i class="fas fa-clock"></i>
                 </div>
-                <h3 class="card-title text-center">Horaires Flexibles</h3>
-                <p class="card-text text-center">
-                    Ouvert 7j/7 de 8h à 22h. Réservez en ligne à tout moment.
-                </p>
+                <h3 class="service-title">Horaires Flexibles</h3>
+                <p class="service-desc">Ouvert 7j/7 de 8h à 00h. Réservez en ligne à tout moment.</p>
             </div>
             
-            <div class="card">
-                <div class="text-center mb-4">
-                    <i class="fas fa-shield-alt text-5xl text-green"></i>
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3 class="card-title text-center">Terrain Sécurisé</h3>
-                <p class="card-text text-center">
-                    Terrain éclairé et clôturé pour votre sécurité.
-                </p>
+                <h3 class="service-title">Terrain Sécurisé</h3>
+                <p class="service-desc">Terrain éclairé et clôturé pour votre sécurité.</p>
             </div>
             
-            <div class="card">
-                <div class="text-center mb-4">
-                    <i class="fas fa-trophy text-5xl text-green"></i>
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <div class="service-icon">
+                    <i class="fas fa-trophy"></i>
                 </div>
-                <h3 class="card-title text-center">Équipements de Qualité</h3>
-                <p class="card-text text-center">
-                    Gazon synthétique de dernière génération.
-                </p>
+                <h3 class="service-title">Équipements de Qualité</h3>
+                <p class="service-desc">Gazon synthétique de dernière génération.</p>
             </div>
         </div>
     </div>
@@ -78,13 +72,13 @@
 <!-- Horaires et Prix Section -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-8">
+        <div class="text-center mb-8-home">
             <h2 class="section-title">Horaires & Tarifs</h2>
             <p class="section-subtitle">Des prix adaptés à tous les budgets</p>
         </div>
         
         <div class="grid grid-3">
-            <div class="card text-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=600&h=400&fit=crop') center/cover; color: white; border: none;">
+            <div class="card text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.4)), url('{{ asset('img/stade_matin.png') }}') center/cover; color: white; border: none;">
                 <div class="text-yellow text-4xl mb-4">
                     <i class="fas fa-sun"></i>
                 </div>
@@ -99,7 +93,7 @@
                 </p>
             </div>
             
-            <div class="card text-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=600&h=400&fit=crop') center/cover; color: white; border: none;">
+            <div class="card text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.11)), url('{{ asset('img/stade_midi.png') }}') center/cover; color: white; border: none;">
                 <div class="text-yellow text-4xl mb-4">
                     <i class="fas fa-cloud-sun"></i>
                 </div>
@@ -114,12 +108,12 @@
                 </p>
             </div>
             
-            <div class="card text-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop') center/cover; color: white; border: none;">
+            <div class="card text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.21), rgba(0, 0, 0, 0.33)), url('{{ asset('img/stade_soir.png') }}') center/cover; color: white; border: none;">
                 <div class="text-yellow text-4xl mb-4">
                     <i class="fas fa-moon"></i>
                 </div>
                 <h3 class="card-title" style="color: white;">Soir</h3>
-                <p class="text-gray-200 mb-4">18h - 22h</p>
+                <p class="text-gray-200 mb-4">18h - 00h</p>
                 <p class="text-4xl font-bold text-yellow">
                     @if($terrain)
                         {{ number_format($terrain->prix_soir, 0, ',', ' ') }} FCFA
@@ -136,7 +130,7 @@
 <section class="section hero-gradient text-white">
     <div class="container text-center">
         <h2 class="section-title">Prêt à jouer ?</h2>
-        <p class="text-xl mb-8 text-gray-200">
+        <p class="text-xl mb-8-home text-gray-200">
             Réservez votre créneau maintenant et vivez une expérience de jeu exceptionnelle.
         </p>
         <a href="{{ route('reservation.index') }}" class="btn-yellow inline-block">

@@ -23,7 +23,7 @@
                 <h2>FootArena</h2>
                 
                 <div class="info-list">
-                    <img src="/img/stade.png" alt="photo du stade" class="contact-image">
+                    <img src="{{ asset('img/stade.png') }}" alt="photo du stade" class="contact-image">
                 </div>
             </div>
             

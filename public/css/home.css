@@ -83,132 +83,84 @@
     animation: fadeInUp 0.6s ease-out 0.2s forwards;
 }
 
-/* Services Section */
+/* Services Section - Brutalist Modern Design */
 .services-section {
-    background: #f9fafb;
+    padding: 5rem 3rem;
+    background: white;
+}
+
+.services-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: #0a0a0a;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .service-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #f9fafb;
+    border: 2px solid #0a0a0a;
+    padding: 2rem;
     position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.service-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #22c55e, #3b82f6, #eab308);
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
-}
-
-.service-card:hover::before {
-    transform: scaleX(1);
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #1a5f1a;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-icon-wrapper {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.service-icon-wrapper::after {
-    content: '';
+.service-number {
     position: absolute;
-    inset: -4px;
-    border-radius: 1.25rem;
-    background: linear-gradient(135deg, #22c55e, #3b82f6);
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.3s ease;
-}
-
-.service-card:hover .service-icon-wrapper::after {
-    opacity: 0.2;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #e5e7eb;
+    line-height: 1;
+    opacity: 0.5;
 }
 
 .service-icon {
-    font-size: 2.5rem;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.service-icon-green {
-    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
-    color: #15803d;
-}
-
-.service-icon-blue {
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-    color: #1d4ed8;
-}
-
-.service-icon-yellow {
-    background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
-    color: #ca8a04;
-}
-
-.service-card h3 {
+    width: 60px;
+    height: 60px;
+    background: #0a0a0a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #111827;
-}
-
-.service-card p {
-    color: #6b7280;
-    line-height: 1.7;
     margin-bottom: 1.5rem;
 }
 
-.service-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.service-card:hover .service-icon {
+    background: #1a5f1a;
 }
 
-.service-feature {
-    background: #f3f4f6;
-    color: #374151;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #0a0a0a;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.service-card:hover .service-feature {
-    background: #f0fdf4;
-    color: #15803d;
+.service-desc {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 /* Pricing Section */
@@ -423,5 +375,24 @@
     
     .cta-title {
         font-size: 1.75rem;
+    }
+    
+    .services-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .service-number {
+        font-size: 2rem;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
     }
 }

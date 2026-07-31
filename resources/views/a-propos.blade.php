@@ -28,7 +28,7 @@
             </div>
             <div class="story-image">
                 <div class="year-tag">2024</div>
-                <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&h=500&fit=crop" alt="Terrain FootArena">
+                <img src="{{ asset('img/stade.png') }}" alt="Terrain FootArena">
             </div>
         </div>
     </div>

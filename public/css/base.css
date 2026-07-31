@@ -305,6 +305,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5rem 1.5rem 1.5rem;
     margin-bottom: 2rem;
 }
+.mb-8-home{
+    padding: 1rem 1.5rem 1.5rem;
+    margin-bottom: 2rem;
+}
 .mb-9 {
     padding: 0.5rem;
     margin-bottom: 2rem;
