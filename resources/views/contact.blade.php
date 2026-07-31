@@ -20,58 +20,10 @@
         <div class="contact-container">
             <!-- Contact Info -->
             <div class="contact-info-wrapper">
-                <h2>Nos Coordonnées</h2>
+                <h2>FootArena</h2>
                 
                 <div class="info-list">
-                    <div class="info-item">
-                        <div class="info-number">01</div>
-                        <div class="info-content">
-                            <h3>Adresse</h3>
-                            <p>
-                                @if($terrain && $terrain->adresse)
-                                    {{ $terrain->adresse }}
-                                @else
-                                    Medina, Dakar, Sénégal
-                                @endif
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-number">02</div>
-                        <div class="info-content">
-                            <h3>Téléphone</h3>
-                            <p>
-                                @if($terrain && $terrain->telephone)
-                                    {{ $terrain->telephone }}
-                                @else
-                                    +221 77 440 95 66
-                                @endif
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-number">03</div>
-                        <div class="info-content">
-                            <h3>Email</h3>
-                            <p>
-                                @if($terrain && $terrain->email)
-                                    {{ $terrain->email }}
-                                @else
-                                    contact@footarena.sn
-                                @endif
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-number">04</div>
-                        <div class="info-content">
-                            <h3>Horaires</h3>
-                            <p>Lundi - Dimanche: 8h00 - 22h00</p>
-                        </div>
-                    </div>
+                    <img src="/img/stade.png" alt="photo du stade" class="contact-image">
                 </div>
             </div>
             
@@ -127,7 +79,7 @@
                         <label for="message">Message *</label>
                         <textarea name="message" 
                                   id="message" 
-                                  rows="6"
+                                  rows="3"
                                   required>{{ old('message') }}</textarea>
                         @error('message')
                             <p class="text-red text-sm mt-1">{{ $message }}</p>
@@ -135,7 +87,7 @@
                     </div>
                     
                     <button type="submit" class="submit-btn">
-                        Envoyer le message
+                        Envoyer
                     </button>
                 </form>
             </div>
@@ -191,7 +143,7 @@
                     </div>
                     <div class="map-info-text">
                         <span class="map-info-label">HORAIRES</span>
-                        <p class="map-info-value">Lun - Dim: 8h00 - 22h00</p>
+                        <p class="map-info-value">Lun - Dim: 8h00 - 23h59</p>
                     </div>
                 </div>
             </div>

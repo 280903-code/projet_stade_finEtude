@@ -44,58 +44,77 @@
 
 /* Contact Section */
 .contact-section {
-    padding: 8rem 3rem;
+    padding: 4rem 3rem;
     background: white;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Contact Image */
+.contact-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid #0a0a0a;
 }
 
 /* Contact Form */
 .contact-form-wrapper h2 {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: 1.9rem;
     font-weight: 900;
     color: #0a0a0a;
     line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
 }
 
 .contact-form-wrapper h2::after {
     content: '';
     display: block;
-    width: 100px;
-    height: 4px;
+    width: 60px;
+    height: 3px;
     background: #1a5f1a;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+}
+
+.contact-info-wrapper h2 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #0a0a0a;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
 }
 
 .form-group {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-weight: 700;
     color: #0a0a0a;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    font-size: 0.7rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1.25rem;
+    padding: 0.75rem 1rem;
     border: 1px solid #0a0a0a;
     background: rgb(235, 235, 235);
-    border-radius: 38px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     font-family: inherit;
 }
@@ -108,23 +127,23 @@
 }
 
 .form-group textarea {
-    min-height: 120px;
+    min-height: 80px;
     resize: vertical;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 1.5rem 3rem;
+    padding: 0.75rem 1.5rem;
     background: #0a0a0a;
     color: white;
-    border-radius: 38px;
-    border: 3px solid #0a0a0a;
-    font-size: 1.125rem;
-    font-weight: 900;
+    border-radius: 8px;
+    border: 2px solid #0a0a0a;
+    font-size: 0.9rem;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
 }
 
 .submit-btn:hover {
@@ -136,15 +155,6 @@
 .contact-info-wrapper {
     position: sticky;
     top: 4rem;
-}
-
-.contact-info-wrapper h2 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 900;
-    color: #0a0a0a;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 3rem;
 }
 
 .info-list {
