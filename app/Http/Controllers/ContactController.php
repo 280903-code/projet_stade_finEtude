@@ -27,7 +27,7 @@ class ContactController extends Controller
             'nom' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'telephone' => 'nullable|string|max:20',
-            'message' => 'required|text|min:10|max:1000',
+            'message' => 'required|string|min:10|max:1000',
         ], [
             'nom.required' => 'Le nom est obligatoire.',
             'email.required' => 'L\'email est obligatoire.',

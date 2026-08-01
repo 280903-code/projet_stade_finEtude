@@ -49,25 +49,52 @@
             </div>
         </div>
 
-        <!-- Notifications -->
+        <!-- Quick Actions -->
         <div class="admin-card">
             <div class="admin-card-header">
-                <h2 class="admin-card-title">Notifications</h2>
+                <h2 class="admin-card-title">Gestion</h2>
             </div>
             <div class="notification-list">
-                <a href="{{ route('admin.reservations') }}" class="notification-item">
+                <a href="{{ route('admin.utilisateurs') }}" class="notification-item">
                     <div class="notification-number">01</div>
                     <div class="notification-content">
-                        <h3>Réservations en attente</h3>
-                        <p>À traiter</p>
+                        <h3>Utilisateurs</h3>
+                        <p>Gérer les comptes</p>
                     </div>
-                    <span class="notification-badge">{{ $reservationsEnAttente }}</span>
+                    <span class="notification-arrow">→</span>
+                </a>
+                
+                <a href="{{ route('admin.horaires') }}" class="notification-item">
+                    <div class="notification-number">02</div>
+                    <div class="notification-content">
+                        <h3>Horaires</h3>
+                        <p>Configurer les créneaux</p>
+                    </div>
+                    <span class="notification-arrow">→</span>
+                </a>
+                
+                <a href="{{ route('admin.prix') }}" class="notification-item">
+                    <div class="notification-number">03</div>
+                    <div class="notification-content">
+                        <h3>Tarifs</h3>
+                        <p>Modifier les prix</p>
+                    </div>
+                    <span class="notification-arrow">→</span>
+                </a>
+                
+                <a href="{{ route('admin.reservations') }}" class="notification-item">
+                    <div class="notification-number">04</div>
+                    <div class="notification-content">
+                        <h3>Réservations</h3>
+                        <p>Gérer les réservations</p>
+                    </div>
+                    <span class="notification-arrow">→</span>
                 </a>
                 
                 <a href="{{ route('admin.messages') }}" class="notification-item">
-                    <div class="notification-number">02</div>
+                    <div class="notification-number">05</div>
                     <div class="notification-content">
-                        <h3>Messages non lus</h3>
+                        <h3>Messages</h3>
                         <p>Boîte de réception</p>
                     </div>
                     <span class="notification-badge">{{ $messagesNonLus }}</span>
@@ -125,7 +152,7 @@
     </div>
 </div>
 
-<!-- Chart.js Library -->
+<!-- on insert Chart.js  -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
@@ -161,7 +188,7 @@
                         beginAtZero: true,
                         ticks: {
                             stepSize: 1,
-                            color: '#666',
+                            color: '#e6dfdf',
                             font: {
                                 size: 11
                             }
@@ -172,7 +199,7 @@
                     },
                     x: {
                         ticks: {
-                            color: '#666',
+                            color: '#ebebeb',
                             font: {
                                 size: 11
                             }

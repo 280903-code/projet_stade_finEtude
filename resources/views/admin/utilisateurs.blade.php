@@ -22,6 +22,7 @@
                     <tr>
                         <th class="text-left py-3 px-4">Utilisateur</th>
                         <th class="text-left py-3 px-4">Email</th>
+                        <th class="text-left py-3 px-4">Rôle</th>
                         <th class="text-left py-3 px-4">Téléphone</th>
                         <th class="text-left py-3 px-4">Inscription</th>
                         <th class="text-left py-3 px-4">Actions</th>
@@ -39,6 +40,11 @@
                                 </div>
                             </td>
                             <td class="py-3 px-4">{{ $utilisateur->email }}</td>
+                            <td class="py-3 px-4">
+                                <span class="px-2 py-1 rounded text-xs font-semibold {{ $utilisateur->role == 'admin' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800' }}">
+                                    {{ $utilisateur->role == 'admin' ? 'Admin' : 'Client' }}
+                                </span>
+                            </td>
                             <td class="py-3 px-4">
                                 {{ $utilisateur->telephone ?? 'Non renseigné' }}
                             </td>
@@ -59,7 +65,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="text-red-600 hover:text-red-700">
-                                        <i class="fas fa-trash"></i>
+                                        Supp
                                     </button>
                                 </form>
                             </td>

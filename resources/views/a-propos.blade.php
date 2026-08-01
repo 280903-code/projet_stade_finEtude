@@ -65,32 +65,34 @@
     </div>
 </section>
 
-<!-- FEATURES SECTION -->
-<section class="features-section">
+<!-- FOUNDER SECTION -->
+<section class="founder-section">
     <div class="container">
-        <div class="features-header">
-            <h2>Pourquoi Nous Choisir ?</h2>
+        <div class="founder-header">
+            <h2>Le Fondateur</h2>
+            <p>La vision derrière FootArena</p>
         </div>
-        <div class="features-list">
-            <div class="feature-row">
-                <div class="feature-number">01</div>
-                <div class="feature-content">
-                    <h3>Réservation en ligne</h3>
-                    <p>Réservez votre créneau facilement depuis notre plateforme en quelques clics.</p>
-                </div>
+
+        <div class="founder-container">
+            <div class="founder-image-wrapper">
+                <img src="{{ asset('img/fondBen.png') }}" alt="Fondateur FootArena" class="founder-image">
             </div>
-            <div class="feature-row">
-                <div class="feature-number">02</div>
-                <div class="feature-content">
-                    <h3>Terrain professionnel</h3>
-                    <p>Surface de jeu de qualité professionnelle pour des performances optimales.</p>
+            <div class="founder-info">
+                <div class="founder-name">Elamine Ben ABDOU</div>
+                <div class="founder-title">Fondateur et CEO</div>
+                <div class="founder-description">
+                    <p>Passionné de football depuis l'enfance, Elamine Ben ABDOU a créé FootArena en 2024 avec une vision simple : offrir aux amateurs de football à Dakar un espace moderne, sécurisé et convivial pour pratiquer leur sport favori.</p>
+                    <p>Son engagement à l'excellence et à la satisfaction des clients a fait de FootArena le terrain de référence dans la région.</p>
                 </div>
-            </div>
-            <div class="feature-row">
-                <div class="feature-number">03</div>
-                <div class="feature-content">
-                    <h3>Éclairage nocturne</h3>
-                    <p>Jouez même le soir grâce à notre système d'éclairage puissant.</p>
+                <div class="founder-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2024</div>
+                        <div class="stat-label">Année de création</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Passion</div>
+                    </div>
                 </div>
             </div>
         </div>
