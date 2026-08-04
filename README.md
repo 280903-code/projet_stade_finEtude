@@ -28,32 +28,12 @@ Application web de gestion de réservations pour terrain de football, développ�
 
 ## Stack Technique
 
-- **Backend**: Laravel 11 (PHP 8.2+)
+- **Backend**: Laravel 11 
 - **Base de données**: SQLite (configurable pour MySQL/PostgreSQL)
 - **Frontend**: Blade templates, CSS3, JavaScript
 - **Styling**: CSS personnalisé
 - **Icons**: Font Awesome 6
 - **Authentification**: Laravel Breeze
-
-## Installation
-
-```bash
-# Installer les dépendances
-composer install
-
-# Configurer l'environnement
-cp .env.example .env
-php artisan key:generate
-
-# Créer la base de données SQLite
-touch database/database.sqlite
-
-# Exécuter les migrations
-php artisan migrate
-
-# Lancer le serveur
-php artisan serve
-```
 
 ## Structure des Routes
 
@@ -80,23 +60,6 @@ Les tarifs sont configurés dans la table `terrains` avec trois champs :
 - `prix_apres_midi`: Tarif pour les créneaux 12h-18h
 - `prix_soir`: Tarif pour les créneaux 18h-00h
 
-## Structure du Projet
-
-```
-app_reserv/
-├── app/
-│   ├── Models/              # Modèles Eloquent
-│   └── Http/
-│       └── Controllers/     # Controllers
-├── database/
-│   └── migrations/          # Migrations
-├── resources/
-│   └── views/               # Vues Blade
-├── routes/
-│   └── web.php              # Routes
-└── public/
-    └── css/                 # Styles CSS
-```
 
 ## Sécurité
 
