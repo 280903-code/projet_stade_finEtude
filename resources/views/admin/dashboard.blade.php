@@ -4,13 +4,11 @@
 
 @section('content')
 <div class="admin-dashboard">
-    <!-- Header -->
     <div class="admin-header">
         <h1>DASHBOARD</h1>
         <p>Vue d'ensemble de votre plateforme</p>
     </div>
 
-    <!-- Stats Grid -->
     <div class="stats-grid">
         <div class="stat-card">
             <div class="stat-label">Total Réservations</div>
@@ -37,9 +35,7 @@
         </div>
     </div>
 
-    <!-- Content Grid -->
     <div class="content-grid">
-        <!-- Chart Section -->
         <div class="admin-card">
             <div class="admin-card-header">
                 <h2 class="admin-card-title">Évolution des réservations</h2>
@@ -49,7 +45,6 @@
             </div>
         </div>
 
-        <!-- Quick Actions -->
         <div class="admin-card">
             <div class="admin-card-header">
                 <h2 class="admin-card-title">Gestion</h2>
@@ -103,7 +98,6 @@
         </div>
     </div>
 
-    <!-- Recent Reservations -->
     <div class="admin-card">
         <div class="admin-card-header">
             <h2 class="admin-card-title">Dernières Réservations</h2>

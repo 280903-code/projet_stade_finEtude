@@ -20,7 +20,6 @@
             @csrf
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Prix Matin -->
                 <div class="border border-gray-200 rounded-lg p-6 text-center">
                     <div class="text-yellow-500 text-5xl mb-4">
                         <i class="fas fa-sun"></i>

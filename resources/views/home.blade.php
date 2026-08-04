@@ -3,15 +3,14 @@
 @section('title', 'Accueil - FootArena')
 
 @section('content')
+
 <!-- Hero Section -->
 <section class="hero">
-    <!-- Background Image -->
+
     <div class="hero-bg">
         <img src="{{ asset('img/photo_accueil.jpeg') }}"
              alt="Terrain de football">
     </div>
-    
-    <!-- Dark Overlay -->
     <div class="hero-overlay"></div>
     
     <!-- Content -->
@@ -33,7 +32,6 @@
     </div>
 </section>
 
-<!-- Services Section -->
 <section id="services" class="services-section">
     <div class="container">
         <h2 class="services-title">NOS SERVICES</h2>
@@ -69,7 +67,7 @@
     </div>
 </section>
 
-<!-- Horaires et Prix Section -->
+
 <section class="section">
     <div class="container">
         <div class="text-center mb-8-home">
@@ -126,7 +124,6 @@
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section hero-gradient text-white">
     <div class="container text-center">
         <h2 class="section-title">Prêt à jouer ?</h2>

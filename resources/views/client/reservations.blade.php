@@ -81,7 +81,6 @@
             @endforeach
         </div>
 
-        <!-- Pagination -->
         <div class="mt-8">
             {{ $reservations->links() }}
         </div>

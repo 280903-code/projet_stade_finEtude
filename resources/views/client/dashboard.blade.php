@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="client-dashboard">
-    <!-- Dashboard Header -->
+
     <div class="dashboard-header">
         <div class="header-content">
             <h1 class="dashboard-title">BONJOUR, <span class="highlight">{{ $user->name }}</span></h1>
@@ -12,7 +12,6 @@
         </div>
     </div>
 
-    <!-- Stats Section -->
     <div class="stats-section">
         <div class="stat-card stat-card-primary">
             <div class="stat-number">{{ $reservationsFutures }}</div>
@@ -28,9 +27,7 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="dashboard-content">
-        <!-- Reservations Section -->
         <div class="content-section">
             <div class="section-header">
                 <h2 class="section-title">DERNIÈRES RÉSERVATIONS</h2>
@@ -76,7 +73,6 @@
             @endif
         </div>
 
-        <!-- Quick Actions Section -->
         <div class="content-section">
             <h2 class="section-title">ACTIONS RAPIDES</h2>
             <div class="quick-actions-grid">

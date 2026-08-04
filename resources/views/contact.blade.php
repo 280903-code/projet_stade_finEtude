@@ -14,7 +14,7 @@
     </div>
 </section>
 
-<!-- CONTACT SECTION -->
+
 <section class="contact-section">
     <div class="container">
         <div class="contact-container">
@@ -26,8 +26,7 @@
                     <img src="{{ asset('img/stade.png') }}" alt="photo du stade" class="contact-image">
                 </div>
             </div>
-            
-            <!-- Contact Form -->
+
             <div class="contact-form-wrapper">
                 <h2>Envoyez-nous un message</h2>
                 

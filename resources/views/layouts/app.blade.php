@@ -82,7 +82,7 @@
                 @endguest
             </div>
             
-            <!-- Mobile menu button -->
+           
             <div>
                 <button id="mobile-menu-button" class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -90,10 +90,10 @@
             </div>
         </div>
         
-        <!-- Mobile Menu Backdrop -->
+  
         <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
         
-        <!-- Mobile Menu Overlay -->
+   
         <div id="mobile-menu" class="mobile-menu-overlay">
             <div class="flex flex-col h-full">
                 <div class="mobile-menu-header">
@@ -127,7 +127,6 @@
         </div>
     </nav>
 
-    <!-- Flash Messages -->
     @if(session('success'))
         <div class="alert alert-success">
             <i class="fas fa-check-circle"></i> {{ session('success') }}
@@ -140,12 +139,12 @@
         </div>
     @endif
 
-    <!-- Main Content -->
+   
     <main>
         @yield('content')
     </main>
 
-    <!-- Footer -->
+ 
     <footer class="footer">
         <div class="container">
             <div class="footer-grid grid-4">
@@ -216,24 +215,22 @@
         mobileMenuButton.addEventListener('click', openMobileMenu);
         mobileMenuClose.addEventListener('click', closeMobileMenu);
         mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
-        
-        // Close menu when clicking on a link
+
+
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', closeMobileMenu);
         });
         
-        // Auto-hide flash messages
+ 
         setTimeout(function() {
             $('.alert-success, .alert-error').fadeOut('slow');
         }, 5000);
         
-        // Header scroll effect
+   
         const nav = document.querySelector('.nav');
         const isHomePage = document.body.classList.contains('home-page');
-        
-        // Initialize immediately on page load
-        if (isHomePage) {
+                if (isHomePage) {
             nav.classList.remove('scrolled');
         }
         

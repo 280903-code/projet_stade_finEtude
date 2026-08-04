@@ -16,7 +16,6 @@
     @endif
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Formulaire d'ajout -->
         <div class="lg:col-span-1">
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h3 class="text-xl font-bold mb-4">Ajouter un horaire</h3>
@@ -79,7 +78,6 @@
             </div>
         </div>
 
-        <!-- Liste des horaires -->
         <div class="lg:col-span-2">
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h3 class="text-xl font-bold mb-4">Horaires existants</h3>

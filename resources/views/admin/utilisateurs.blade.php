@@ -75,7 +75,6 @@
             </table>
         </div>
         
-        <!-- Pagination -->
         <div class="p-4">
             {{ $utilisateurs->links() }}
         </div>

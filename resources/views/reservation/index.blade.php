@@ -13,19 +13,18 @@
     </div>
 </section>
 
-<!-- Réservation Section -->
 <section class="reservation-section">
     <div class="container">
         @if($terrain)
-            <!-- Informations du terrain -->
+           
 
             <div class="reservation-grid">
-                <!-- Calendrier -->
+                
                 <div>
                     <div class="reservation-card">
                         <h3 class="font-bold text-xl mb-4">Sélectionnez une date</h3>
                         
-                        <!-- Sélecteur de date -->
+                        
                         <div class="form-group">
                             <label class="form-label">Date</label>
                             <input type="date" 
@@ -34,7 +33,7 @@
                                    min="{{ date('Y-m-d') }}">
                         </div>
                         
-                        <!-- Sélecteur d'heure -->
+                        
                         <div class="form-group">
                             <label class="form-label">Heure de début</label>
                             <select id="heureSelection" 
@@ -44,7 +43,7 @@
                             </select>
                         </div>
                         
-                        <!-- Bouton pour vérifier la disponibilité -->
+                       
                         <div class="form-group">
                             <button type="button" 
                                     id="verifierDisponibilite" 
@@ -54,7 +53,7 @@
                             </button>
                         </div>
                         
-                        <!-- Légende -->
+                       
                         <div class="flex flex-wrap gap-4 mb-6">
                             <div class="legend-item">
                                 <div class="legend-color legend-green"></div>
@@ -70,7 +69,7 @@
                             </div>
                         </div>
                         
-                        <!-- Créneaux horaires -->
+                       
                         <div id="creneauxContainer" class="space-y-4">
                             <div class="text-center py-12 text-gray">
                                 <i class="fas fa-calendar-alt text-6xl mb-4"></i>
@@ -80,7 +79,7 @@
                     </div>
                 </div>
                 
-                <!-- Sidebar avec informations -->
+                
                 <div>
                     <!-- Prix -->
                     <div class="pricing-card mb-6">
@@ -101,7 +100,7 @@
                         </div>
                     </div>
                     
-                    <!-- Informations pratiques -->
+                   
                     <div class="info-card">
                         <h3 class="font-bold text-xl mb-4 text-green">Informations</h3>
                         <ul class="info-list text-sm text-gray">
@@ -197,6 +196,7 @@
             heureSelect.disabled = false;
             heureSelect.innerHTML = '<option value="">Sélectionnez une heure</option>';
             
+        
             // Générer les options d'heure (8h à 21h)
             for (let heure = 8; heure < 23; heure++) {
                 const option = document.createElement('option');
@@ -205,7 +205,7 @@
                 heureSelect.appendChild(option);
             }
             
-            // Activer le bouton de vérification
+            
             verifierBtn.disabled = true;
         } else {
             heureSelect.disabled = true;
@@ -213,29 +213,26 @@
             verifierBtn.disabled = true;
         }
         
-        // Réinitialiser le conteneur des créneaux
+
         document.getElementById('creneauxContainer').innerHTML = '<div class="text-center py-12 text-gray"><i class="fas fa-calendar-alt text-6xl mb-4"></i><p>Sélectionnez une date et une heure pour voir les créneaux disponibles</p></div>';
     });
     
-    // Gestion du changement d'heure
+
     document.getElementById('heureSelection').addEventListener('change', function(e) {
         const verifierBtn = document.getElementById('verifierDisponibilite');
         verifierBtn.disabled = !e.target.value;
     });
-    
-    // Gestion du bouton de vérification
+
     document.getElementById('verifierDisponibilite').addEventListener('click', function() {
         const heure = document.getElementById('heureSelection').value;
         if (selectedDate && heure) {
             chargerCreneaux(selectedDate, parseInt(heure));
         }
     });
-    
-    // Charger les créneaux pour une date et une heure spécifique
+
     function chargerCreneaux(date, heureSelectionnee) {
         const container = document.getElementById('creneauxContainer');
-        
-        // Afficher un loader
+
         container.innerHTML = '<div class="text-center py-12"><i class="fas fa-spinner fa-spin text-4xl text-green"></i></div>';
         
         fetch(`{{ route('reservation.creneaux') }}?date=${date}`)
@@ -264,14 +261,14 @@
                     return;
                 }
                 
-                // Afficher seulement le créneau sélectionné
+
                 let html = '<div class="grid grid-1 gap-4">';
                 html += afficherCreneau(creneauSelectionne);
                 html += '</div>';
                 
                 container.innerHTML = html;
                 
-                // Ajouter les event listeners sur le créneau
+
                 const timeSlot = container.querySelector('.time-slot');
                 if (timeSlot) {
                     timeSlot.addEventListener('click', function() {
@@ -290,7 +287,7 @@
             });
     }
     
-    // Afficher un créneau
+
     function afficherCreneau(creneau) {
         let classe = '';
         let icon = '';
@@ -321,7 +318,7 @@
         `;
     }
     
-    // Ouvrir le modal de réservation
+
     function ouvrirModal(heureDebut, heureFin, prix) {
         document.getElementById('modalDate').value = selectedDate;
         document.getElementById('modalHeureDebut').value = heureDebut;
@@ -332,13 +329,13 @@
         document.getElementById('reservationModal').classList.remove('hidden');
     }
     
-    // Fermer le modal
+
     function closeModal() {
         document.getElementById('reservationModal').classList.remove('open');
         document.getElementById('reservationModal').classList.add('hidden');
     }
     
-    // Fermer le modal en cliquant en dehors
+
     window.onclick = function(event) {
         const modal = document.getElementById('reservationModal');
         if (event.target === modal) {

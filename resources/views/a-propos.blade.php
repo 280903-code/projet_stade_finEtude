@@ -65,7 +65,6 @@
     </div>
 </section>
 
-<!-- FOUNDER SECTION -->
 <section class="founder-section">
     <div class="container">
         <div class="founder-header">

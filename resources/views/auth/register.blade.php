@@ -3,7 +3,7 @@
 @section('title', 'Inscription - FootArena')
 
 @section('content')
-<!-- Hero Section -->
+
 <section class="reservation-hero">
     <div class="container text-center">
         <h1>Inscription</h1>
@@ -11,7 +11,6 @@
     </div>
 </section>
 
-<!-- Register Section -->
 <section class="section">
     <div class="container-md">
         <div class="card">

@@ -4,7 +4,6 @@
 
 @section('content')
 <div class="admin-dashboard">
-    <!-- Header -->
     <div class="admin-header">
         <h1>RÉSERVATIONS</h1>
         <p>Gérez toutes les réservations</p>
@@ -16,7 +15,6 @@
         </div>
     @endif
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <form method="GET" action="{{ route('admin.reservations') }}" class="flex gap-4 flex-wrap w-full">
             <div class="flex-1 min-w-[200px]">
@@ -42,7 +40,6 @@
         </form>
     </div>
 
-    <!-- Reservations Table -->
     <div class="admin-card">
         <div class="admin-card-header">
             <h2 class="admin-card-title">Liste des Réservations</h2>
@@ -121,7 +118,6 @@
                 </table>
             </div>
             
-            <!-- Pagination -->
             @if($reservations->hasPages())
                 <div class="pagination">
                     {{ $reservations->links() }}

@@ -4,7 +4,6 @@
 
 @section('content')
 <div class="admin-dashboard">
-    <!-- Header -->
     <div class="admin-header">
         <h1>MESSAGES</h1>
         <p>Consultez les messages envoyés par les visiteurs</p>
@@ -16,7 +15,6 @@
         </div>
     @endif
 
-    <!-- Messages Table -->
     <div class="admin-card">
         <div class="admin-card-header">
             <h2 class="admin-card-title">Liste des Messages</h2>
@@ -81,7 +79,6 @@
                 </table>
             </div>
             
-            <!-- Pagination -->
             @if($messages->hasPages())
                 <div class="pagination">
                     {{ $messages->links() }}
