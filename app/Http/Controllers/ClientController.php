@@ -28,9 +28,7 @@ class ClientController extends Controller
         return view('client.dashboard', compact('user', 'reservationsFutures', 'reservationsPassees', 'dernieresReservations'));
     }
 
-    /**
-     * Toutes les réservations du client
-     */
+
     public function reservations()
     {
         $reservations = Auth::user()->reservations()
@@ -41,9 +39,6 @@ class ClientController extends Controller
         return view('client.reservations', compact('reservations'));
     }
 
-    /**
-     * Réservations futures
-     */
     public function reservationsFutures()
     {
         $reservations = Auth::user()->reservations()
@@ -53,9 +48,6 @@ class ClientController extends Controller
         return view('client.reservations-futures', compact('reservations'));
     }
 
-    /**
-     * Historique des réservations
-     */
     public function historique()
     {
         $reservations = Auth::user()->reservations()
@@ -65,9 +57,6 @@ class ClientController extends Controller
         return view('client.historique', compact('reservations'));
     }
 
-    /**
-     * Annuler une réservation
-     */
     public function annulerReservation($id)
     {
         $reservation = Reservation::where('id', $id)
@@ -83,17 +72,13 @@ class ClientController extends Controller
         return back()->with('success', 'Votre réservation a été annulée avec succès.');
     }
 
-    /**
-     * Profil utilisateur
-     */
+
     public function profil()
     {
         return view('client.profil');
     }
 
-    /**
-     * Mettre à jour le profil
-     */
+
     public function updateProfil(Request $request)
     {
         $validated = $request->validate([

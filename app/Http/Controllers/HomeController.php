@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Page d'accueil
-     */
+  
     public function index()
     {
         // Récupérer le terrain (on suppose qu'il y en a un seul)
@@ -18,9 +16,6 @@ class HomeController extends Controller
         return view('home', compact('terrain'));
     }
 
-    /**
-     * Page À propos
-     */
     public function aPropos()
     {
         $terrain = Terrain::where('actif', true)->first();

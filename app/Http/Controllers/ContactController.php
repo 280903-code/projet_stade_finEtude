@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    /**
-     * Page de contact
-     */
+
     public function index()
     {
         $terrain = Terrain::where('actif', true)->first();
@@ -18,9 +16,7 @@ class ContactController extends Controller
         return view('contact', compact('terrain'));
     }
 
-    /**
-     * Envoyer un message de contact
-     */
+  
     public function store(Request $request)
     {
         $validated = $request->validate([

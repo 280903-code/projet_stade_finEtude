@@ -11,9 +11,7 @@ use Carbon\Carbon;
 
 class ReservationController extends Controller
 {
-    /**
-     * Page de réservation avec calendrier
-     */
+
     public function index()
     {
         $terrain = Terrain::where('actif', true)->first();
@@ -22,7 +20,7 @@ class ReservationController extends Controller
             return redirect()->route('home')->with('error', 'Aucun terrain disponible pour le moment.');
         }
         
-        // Récupérer les horaires de la semaine
+ 
         $horaires = Horaire::where('disponible', true)
                            ->orderBy('jour_semaine')
                            ->orderBy('heure_debut')
@@ -32,9 +30,7 @@ class ReservationController extends Controller
         return view('reservation.index', compact('terrain', 'horaires'));
     }
 
-    /**
-     * API pour récupérer les créneaux disponibles pour une date
-     */
+
     public function getCreneaux(Request $request)
     {
         $date = $request->get('date');
@@ -55,12 +51,12 @@ class ReservationController extends Controller
         $prixApresMidi = $terrain->prix_apres_midi;
         $prixSoir = $terrain->prix_soir;
         
-        // Récupérer les réservations existantes pour cette date
+
         $reservationsExistantes = Reservation::whereDate('date_reservation', $date)
                                              ->whereIn('statut', ['en_attente', 'confirmee'])
                                              ->get(['heure_debut', 'heure_fin', 'user_id']);
         
-        // Générer des créneaux de 1h de 8h à 23h
+
         $creneaux = [];
         for ($heure = 8; $heure < 23; $heure++) {
             $heureDebut = sprintf('%02d:00:00', $heure);
@@ -95,7 +91,7 @@ class ReservationController extends Controller
                 $label = 'Disponible';
             }
             
-            // Calculer le prix selon l'heure
+            // On alcule le prix selon l'heure
             $prix = $this->calculerPrix($heureDebut, $prixMatin, $prixApresMidi, $prixSoir);
             
             $creneaux[] = [
@@ -111,12 +107,9 @@ class ReservationController extends Controller
         return response()->json($creneaux);
     }
 
-    /**
-     * Enregistrer une nouvelle réservation
-     */
+
     public function store(Request $request)
     {
-        // Validation des données
         $validated = $request->validate([
             'date_reservation' => 'required|date|after_or_equal:today',
             'heure_debut' => 'required',
@@ -132,7 +125,6 @@ class ReservationController extends Controller
             'prix.numeric' => 'Le prix doit être un nombre.',
         ]);
 
-        // Vérifier si le créneau est déjà réservé
         $existingReservations = Reservation::whereDate('date_reservation', $validated['date_reservation'])
                                           ->whereIn('statut', ['en_attente', 'confirmee'])
                                           ->get();
@@ -147,7 +139,6 @@ class ReservationController extends Controller
                         ->withInput();
         }
 
-        // Créer la réservation
         $reservation = Reservation::create([
             'user_id' => Auth::id(),
             'date_reservation' => $validated['date_reservation'],
@@ -162,9 +153,7 @@ class ReservationController extends Controller
                         ->with('success', 'Votre réservation a été enregistrée avec succès ! En attente de confirmation.');
     }
 
-    /**
-     * Calculer le prix selon l'heure
-     */
+
     private function calculerPrix($heure, $prixMatin, $prixApresMidi, $prixSoir)
     {
         $heure = Carbon::createFromFormat('H:i:s', $heure);

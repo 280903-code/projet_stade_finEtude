@@ -20,9 +20,7 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     }
 
-    /**
-     * Handle a registration request for the application.
-     */
+
     public function store(Request $request)
     {
         $request->validate([

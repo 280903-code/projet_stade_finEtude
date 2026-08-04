@@ -16,9 +16,6 @@ class AuthenticatedSessionController extends Controller
         return view('auth.login');
     }
 
-    /**
-     * Handle an authentication attempt.
-     */
     public function store(Request $request)
     {
         $credentials = $request->validate([
